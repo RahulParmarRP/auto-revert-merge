@@ -1,0 +1,16 @@
+name: 'Auto Revert Last Merge'
+description: 'Auto Revert the last merge commit from the branch / direct push protected branch to make your project deploy after every merge commit.'
+
+branding:
+  icon: "aperture"
+  color: "purple"
+
+inputs: 
+  BRANCH_NAME:
+    description: 'Branch name on which auto revert merge commit will be performed.'
+    required: false
+    default: 'master'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
